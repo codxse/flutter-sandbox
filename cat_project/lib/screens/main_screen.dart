@@ -1,5 +1,6 @@
 import 'package:cat_project/widgets/body.dart';
 import 'package:cat_project/widgets/contact_button.dart';
+import 'package:cat_project/widgets/social_buttons.dart';
 import 'package:flutter/material.dart';
 
 class Portofolio extends StatelessWidget {
@@ -39,7 +40,14 @@ class Portofolio extends StatelessWidget {
       ),
       body: Stack(
         children: const [
-          Body()
+          Body(),
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: Padding(
+              padding: EdgeInsets.all(16.0),
+              child: SocialButtons(),
+            )
+          )
         ],
       ),
     );
